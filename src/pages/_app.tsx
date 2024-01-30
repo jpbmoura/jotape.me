@@ -14,7 +14,7 @@ const lato = Lato({
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <main className={lato.className}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </main>
   );
 };

@@ -1,4 +1,8 @@
 import Head from "next/head";
+import logo from "../assets/images/jp-logo.png";
+import Image from "next/image";
+import Projects from "~/components/Projects";
+import Writing from "~/components/Writing";
 
 export default function Home() {
   return (
@@ -9,9 +13,16 @@ export default function Home() {
         <link rel="icon" href="/favicon-JP(G).png" />
       </Head>
       <main className="flex min-h-screen flex-col items-center bg-neutral-900 text-white">
-        <div className="h-full w-full py-16 md:max-w-2xl md:py-32">
+        <Image
+          className="fixed bottom-2 left-1 z-20 w-10"
+          src={logo}
+          alt="logo"
+        />
+        <div className="h-full w-full px-6  py-16 md:max-w-2xl md:px-0 md:py-32">
           <div className="space-y-7">
-            <h1 className="font-medium">João Pedro de Moura</h1>
+            <div>
+              <h1 className="font-medium">João Pedro de Moura</h1>
+            </div>
 
             <p className="font-light">
               I&apos;m a front-end developer based in Brazil who has a passion
@@ -21,7 +32,7 @@ export default function Home() {
                 href="https://www.eduzz.com/pt-br"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline"
+                className="underline transition hover:text-amber-400 hover:decoration-amber-400"
               >
                 Eduzz
               </a>
@@ -33,6 +44,51 @@ export default function Home() {
               nerd.
             </p>
           </div>
+
+          <div className="justify-between3 mt-12 flex flex-col md:flex-row">
+            <div className="w-full md:w-1/3">
+              <h2 className="mb-6 text-sm font-light text-neutral-400">
+                Projects
+              </h2>
+              <Projects />
+            </div>
+
+            <div className="w-full md:ml-3 md:w-1/3">
+              <h2 className="mb-6 text-sm font-light text-neutral-400">
+                Writing
+              </h2>
+              <Writing />
+            </div>
+            <div className="w-full md:ml-3 md:w-1/3">
+              <h2 className="mb-6 text-sm font-light text-neutral-400">
+                Photos
+              </h2>
+              <div className="min-h-16">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-light underline decoration-neutral-500 transition hover:text-fuchsia-400 hover:decoration-fuchsia-500"
+                >
+                  Go to my Photos
+                </a>
+                <p className="font-light text-neutral-400">
+                  Don&apos;t create expectations
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <h2 className="">More about me</h2>
+            <p className="mt-6 font-light">
+              I love to learn new things, currently learning about React and
+              Next.js. I&apos;m also interested in learning about UI/UX design.
+            </p>
+          </div>
+        </div>
+        <div className="fixed bottom-0 z-10 flex h-14 w-full items-center justify-end border-t border-t-neutral-800 bg-neutral-900 px-4">
+          <p className="font-light text-neutral-400">A wizard is never late</p>
         </div>
       </main>
     </>
