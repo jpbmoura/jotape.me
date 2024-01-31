@@ -29,7 +29,7 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center bg-neutral-900 text-white">
         <Image
-          className="fixed left-1 top-2 z-20 hidden w-6 rounded-full bg-neutral-900 md:block"
+          className="fixed left-1 top-2 z-20 hidden w-6 rounded-full bg-neutral-900 blur-sm transition-all hover:blur-none md:block"
           src={logo}
           alt="logo"
         />
@@ -120,14 +120,17 @@ export default function Home() {
         <div className="z-10 flex h-14 w-full items-center justify-center border-t border-t-neutral-800 bg-neutral-900">
           <div className="flex w-full items-center justify-between px-6 font-light text-neutral-400 md:max-w-2xl md:px-0">
             <span
-              onClick={() => setShowenBlackSpeech(!isShowenBlackSpeech)}
-              className="flex flex-row space-x-1 transition hover:cursor-pointer hover:text-slate-500"
+              onMouseOver={() => setShowenBlackSpeech(false)}
+              onMouseOut={() => setShowenBlackSpeech(true)}
+              className="flex flex-row space-x-1 transition hover:cursor-default hover:text-slate-500"
             >
               <Image className="z-20 w-5" src={eye} alt="sauron eye" />
               {isShowenBlackSpeech ? (
-                <p>&quot;Ash nazg durbatulûk&quot;</p>
+                <p className="">&quot;Ash nazg durbatulûk&quot;</p>
               ) : (
-                <p>&quot;One Ring to rule them all&quot;</p>
+                <p className="hover:text-orange-300">
+                  &quot;One Ring to rule them all&quot;
+                </p>
               )}
             </span>
             <p>{handleTodayDate()}</p>
