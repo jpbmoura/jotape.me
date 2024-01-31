@@ -29,11 +29,11 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center bg-neutral-900 text-white">
         <Image
-          className="fixed left-1 top-2 z-20 hidden w-8 rounded-full bg-neutral-900 md:block"
+          className="fixed left-1 top-2 z-20 hidden w-6 rounded-full bg-neutral-900 md:block"
           src={logo}
           alt="logo"
         />
-        <div className="h-full w-full px-6 py-16 md:max-w-2xl md:px-0 md:py-32">
+        <div className="animate-fade-in h-full w-full px-6 py-16 md:max-w-2xl md:px-0 md:py-32 ">
           <div className="space-y-7">
             <div className="sticky top-0 flex flex-row items-center justify-between bg-neutral-900 py-4">
               <h1 className="font-medium">João Pedro de Moura</h1>
