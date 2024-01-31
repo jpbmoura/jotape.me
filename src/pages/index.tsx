@@ -43,7 +43,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <AiOutlineGithub className="text-4xl transition hover:cursor-pointer hover:text-slate-500" />
+                  <AiOutlineGithub className="animate-blink-github text-4xl transition hover:cursor-pointer hover:text-yellow-400" />
                 </a>
 
                 <a
@@ -51,7 +51,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <AiFillLinkedin className=" text-4xl transition hover:cursor-pointer hover:text-blue-400" />
+                  <AiFillLinkedin className="animate-blink-linkedin text-4xl transition hover:cursor-pointer hover:text-blue-400" />
                 </a>
               </div>
             </div>
@@ -76,20 +76,20 @@ export default function Home() {
 
           <div className="justify-between3 mt-12 flex flex-col md:flex-row">
             <div className="w-full md:w-1/3">
-              <h2 className="mb-6 border-t border-t-neutral-500 pl-1 text-sm font-light text-neutral-400 md:border-none">
+              <h2 className="animate-blink-cyan mb-6 border-t border-t-neutral-500 pl-1 text-sm font-light text-neutral-400  md:border-none">
                 Projects
               </h2>
               <Projects />
             </div>
 
             <div className="w-full md:ml-3 md:w-1/3">
-              <h2 className="mb-6 border-t border-t-neutral-500 pl-1 text-sm font-light text-neutral-400 md:border-none">
+              <h2 className="animate-blink-lime mb-6 border-t border-t-neutral-500 pl-1 text-sm font-light text-neutral-400 md:border-none">
                 Writing
               </h2>
               <Writing />
             </div>
             <div className="w-full md:ml-3 md:w-1/3">
-              <h2 className="mb-6 border-t border-t-neutral-500 pl-1 text-sm font-light text-neutral-400 md:border-none">
+              <h2 className="animate-blink-fuchsia mb-6 border-t border-t-neutral-500 pl-1 text-sm font-light text-neutral-400 md:border-none">
                 Photos
               </h2>
               <div className="min-h-16">
