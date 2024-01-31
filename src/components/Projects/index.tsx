@@ -1,3 +1,5 @@
+import { BsArrowUpRight } from "react-icons/bs";
+
 interface IProjectItem {
   title: string;
   description: string;
@@ -11,9 +13,10 @@ const Item = ({ title, description, link }: IProjectItem) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-light underline decoration-neutral-500 transition hover:text-cyan-400 hover:decoration-cyan-500"
+        className="flex flex-row items-center font-light underline decoration-neutral-500 transition hover:text-cyan-400 hover:decoration-cyan-500"
       >
         {title}
+        <BsArrowUpRight className="pl-1" />
       </a>
       <p className="font-light text-neutral-400">{description}</p>
     </div>

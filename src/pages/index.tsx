@@ -7,6 +7,7 @@ import Writing from "~/components/Writing";
 import { AiOutlineGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import React from "react";
+import { BsArrowUpRight } from "react-icons/bs";
 
 export default function Home() {
   const [isShowenBlackSpeech, setShowenBlackSpeech] = React.useState(true);
@@ -55,26 +56,16 @@ export default function Home() {
               </div>
             </div>
             <p className="text-justify font-light">
-              I&apos;m a front-end developer based in Brazil who has a passion
-              for creating beautiful and functional user experiences. Currently
-              working at{" "}
-              <a
-                href="https://www.eduzz.com/pt-br"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline transition hover:text-amber-400 hover:decoration-amber-400"
-              >
-                Eduzz
-              </a>
-              .
+              I&apos;m a front-end developer based in Brazil passioned for
+              creating beautiful and functional user experiences.
             </p>
 
             <p className="text-justify font-light">
               My expertise lies in React, Next.JS, TypeScript and JavaScript.
               Beyond my technical skills, I&apos;m a strong team player with a
               positive attitude and a dedication to exceeding expectations.
-              I&apos;m always looking for opportunities to grow and contribute
-              to innovative projects. I&apos;m also a quick learner and eager to
+              Always looking for opportunities to grow and contribute to
+              innovative projects. I&apos;m also a quick learner and eager to
               adopt new technologies.
             </p>
             <p className="text-justify font-light">
@@ -85,20 +76,20 @@ export default function Home() {
 
           <div className="justify-between3 mt-12 flex flex-col md:flex-row">
             <div className="w-full md:w-1/3">
-              <h2 className="mb-6 text-sm font-light text-neutral-400">
+              <h2 className="mb-6 border-t border-t-neutral-500 pl-1 text-sm font-light text-neutral-400 md:border-none">
                 Projects
               </h2>
               <Projects />
             </div>
 
             <div className="w-full md:ml-3 md:w-1/3">
-              <h2 className="mb-6 text-sm font-light text-neutral-400">
+              <h2 className="mb-6 border-t border-t-neutral-500 pl-1 text-sm font-light text-neutral-400 md:border-none">
                 Writing
               </h2>
               <Writing />
             </div>
             <div className="w-full md:ml-3 md:w-1/3">
-              <h2 className="mb-6 text-sm font-light text-neutral-400">
+              <h2 className="mb-6 border-t border-t-neutral-500 pl-1 text-sm font-light text-neutral-400 md:border-none">
                 Photos
               </h2>
               <div className="min-h-16">
@@ -106,9 +97,9 @@ export default function Home() {
                   href="https://vsco.co/jpbmoura"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-light underline decoration-neutral-500 transition hover:text-fuchsia-400 hover:decoration-fuchsia-500"
+                  className=" flex flex-row items-center font-light underline decoration-neutral-500 transition hover:text-fuchsia-400 hover:decoration-fuchsia-500"
                 >
-                  Go to my Photos
+                  Go to my Photos <BsArrowUpRight className="pl-1" />
                 </a>
                 <p className="font-light text-neutral-400">
                   Don&apos;t create expectations
@@ -130,7 +121,7 @@ export default function Home() {
           <div className="flex w-full items-center justify-between px-6 font-light text-neutral-400 md:max-w-2xl md:px-0">
             <span
               onClick={() => setShowenBlackSpeech(!isShowenBlackSpeech)}
-              className="flex flex-row space-x-1 transition hover:cursor-default"
+              className="flex flex-row space-x-1 transition hover:cursor-pointer hover:text-slate-500"
             >
               <Image className="z-20 w-5" src={eye} alt="sauron eye" />
               {isShowenBlackSpeech ? (
