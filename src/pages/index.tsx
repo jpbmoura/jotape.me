@@ -1,10 +1,24 @@
 import Head from "next/head";
 import logo from "../assets/images/jp-logo.png";
+import eye from "../assets/images/sauron.png";
 import Image from "next/image";
 import Projects from "~/components/Projects";
 import Writing from "~/components/Writing";
+import { AiOutlineGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import React from "react";
 
 export default function Home() {
+  const [isShowenBlackSpeech, setShowenBlackSpeech] = React.useState(true);
+
+  const handleTodayDate = () => {
+    const date = new Date();
+    const month = date.toLocaleString("en-us", { month: "long" });
+    const year = date.getFullYear();
+
+    return `${month}/${year}`;
+  };
+
   return (
     <>
       <Head>
@@ -14,17 +28,33 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center bg-neutral-900 text-white">
         <Image
-          className="fixed bottom-2 left-1 z-20 w-10"
+          className="fixed left-1 top-2 z-20 hidden w-8 rounded-full bg-neutral-900 md:block"
           src={logo}
           alt="logo"
         />
-        <div className="h-full w-full px-6  py-16 md:max-w-2xl md:px-0 md:py-32">
+        <div className="h-full w-full px-6 py-16 md:max-w-2xl md:px-0 md:py-32">
           <div className="space-y-7">
-            <div>
+            <div className="sticky top-0 flex flex-row items-center justify-between bg-neutral-900 py-4">
               <h1 className="font-medium">João Pedro de Moura</h1>
-            </div>
+              <div className="flex flex-row space-x-1">
+                <a
+                  href="https://github.com/jpbmoura"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiOutlineGithub className="text-4xl transition hover:cursor-pointer hover:text-slate-500" />
+                </a>
 
-            <p className="font-light">
+                <a
+                  href="https://br.linkedin.com/in/jpbmoura"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillLinkedin className=" text-4xl transition hover:cursor-pointer hover:text-blue-400" />
+                </a>
+              </div>
+            </div>
+            <p className="text-justify font-light">
               I&apos;m a front-end developer based in Brazil who has a passion
               for creating beautiful and functional user experiences. Currently
               working at{" "}
@@ -39,9 +69,17 @@ export default function Home() {
               .
             </p>
 
-            <p className="font-light">
-              Beside programming, I&apos;m a huge proghead and Lord of the Rings
-              nerd.
+            <p className="text-justify font-light">
+              My expertise lies in React, Next.JS, TypeScript and JavaScript.
+              Beyond my technical skills, I&apos;m a strong team player with a
+              positive attitude and a dedication to exceeding expectations.
+              I&apos;m always looking for opportunities to grow and contribute
+              to innovative projects. I&apos;m also a quick learner and eager to
+              adopt new technologies.
+            </p>
+            <p className="text-justify font-light">
+              Beside programming, I&apos;m a huge music nerd, love to take some
+              random photos and sometimes I like to write about life and stuff.
             </p>
           </div>
 
@@ -65,7 +103,7 @@ export default function Home() {
               </h2>
               <div className="min-h-16">
                 <a
-                  href="#"
+                  href="https://vsco.co/jpbmoura"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-light underline decoration-neutral-500 transition hover:text-fuchsia-400 hover:decoration-fuchsia-500"
@@ -81,14 +119,28 @@ export default function Home() {
 
           <div className="mt-10">
             <h2 className="">More about me</h2>
-            <p className="mt-6 font-light">
-              I love to learn new things, currently learning about React and
-              Next.js. I&apos;m also interested in learning about UI/UX design.
+            <p className="mt-6 text-justify font-light">
+              I love to learn new things, currently learning about advanced
+              features in React and Next.js. I&apos;m also interested in
+              learning about UI/UX design.
             </p>
           </div>
         </div>
-        <div className="fixed bottom-0 z-10 flex h-14 w-full items-center justify-end border-t border-t-neutral-800 bg-neutral-900 px-4">
-          <p className="font-light text-neutral-400">A wizard is never late</p>
+        <div className="z-10 flex h-14 w-full items-center justify-center border-t border-t-neutral-800 bg-neutral-900">
+          <div className="flex w-full items-center justify-between px-6 font-light text-neutral-400 md:max-w-2xl md:px-0">
+            <span
+              onClick={() => setShowenBlackSpeech(!isShowenBlackSpeech)}
+              className="flex flex-row space-x-1 transition hover:cursor-default"
+            >
+              <Image className="z-20 w-5" src={eye} alt="sauron eye" />
+              {isShowenBlackSpeech ? (
+                <p>&quot;Ash nazg durbatulûk&quot;</p>
+              ) : (
+                <p>&quot;One Ring to rule them all&quot;</p>
+              )}
+            </span>
+            <p>{handleTodayDate()}</p>
+          </div>
         </div>
       </main>
     </>
