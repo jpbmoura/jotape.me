@@ -27,9 +27,9 @@ const Projects = () => {
   return (
     <div>
       <Item
-        title="duck.img"
-        description="Image generator app"
-        link="https://www.eduzz.com/pt-br"
+        title="1001 Things"
+        description="See today album."
+        link="https://1001things.vercel.app/"
       />
     </div>
   );
