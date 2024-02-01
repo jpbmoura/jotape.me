@@ -8,6 +8,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import React from "react";
 import { BsArrowUpRight } from "react-icons/bs";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   const [isShowenBlackSpeech, setShowenBlackSpeech] = React.useState(true);
@@ -33,7 +34,7 @@ export default function Home() {
           src={logo}
           alt="logo"
         />
-        <div className="animate-fade-in h-full w-full px-6 py-16 md:max-w-2xl md:px-0 md:py-32 ">
+        <div className="h-full w-full animate-fade-in px-6 py-16 md:max-w-2xl md:px-0 md:py-32 ">
           <div className="space-y-7">
             <div className="sticky top-0 flex flex-row items-center justify-between bg-neutral-900 py-4">
               <h1 className="font-medium">João Pedro de Moura</h1>
@@ -137,6 +138,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Analytics />
     </>
   );
 }
