@@ -9,6 +9,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 import React from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   const [isShowenBlackSpeech, setShowenBlackSpeech] = React.useState(true);
@@ -139,6 +140,7 @@ export default function Home() {
         </div>
       </main>
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }
