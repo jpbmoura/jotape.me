@@ -13,7 +13,7 @@ const Item = ({ title, description, link }: IWritingtItem) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-row items-center font-light underline decoration-neutral-500 transition hover:text-lime-400 hover:decoration-lime-500"
+        className="flex flex-row items-center font-light decoration-neutral-500 transition hover:text-lime-400 hover:decoration-lime-500"
       >
         {title}
         <BsArrowUpRight className="pl-1" />

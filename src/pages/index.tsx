@@ -99,7 +99,7 @@ export default function Home() {
                   href="https://vsco.co/jpbmoura"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" flex flex-row items-center font-light underline decoration-neutral-500 transition hover:text-fuchsia-400 hover:decoration-fuchsia-500"
+                  className=" flex flex-row items-center font-light decoration-neutral-500 transition hover:text-fuchsia-400 hover:decoration-fuchsia-500"
                 >
                   Go to my Photos <BsArrowUpRight className="pl-1" />
                 </a>

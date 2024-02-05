@@ -13,7 +13,7 @@ const Item = ({ title, description, link }: IProjectItem) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-row items-center font-light underline decoration-neutral-500 transition hover:text-cyan-400 hover:decoration-cyan-500"
+        className="flex flex-row items-center font-light decoration-neutral-500 transition hover:text-cyan-400  hover:decoration-cyan-500"
       >
         {title}
         <BsArrowUpRight className="pl-1" />
@@ -30,6 +30,12 @@ const Projects = () => {
         title="1001 Things"
         description="See today album."
         link="https://1001things.vercel.app/"
+      />
+
+      <Item
+        title="Auralytics"
+        description="Insights for your online course."
+        link="https://auralytics.vercel.app/"
       />
     </div>
   );
