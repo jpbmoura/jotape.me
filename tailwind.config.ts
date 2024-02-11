@@ -1,15 +1,22 @@
-import { text } from "stream/consumers";
 import { type Config } from "tailwindcss";
-import theme, { fontFamily } from "tailwindcss/defaultTheme";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
+      boxShadow: {
+        lightBulb: "0 5px 100px 30px RGB(235, 196, 164)",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       keyframes: {
+        swing: {
+          "0%": { transform: "rotate(3deg)" },
+          "100%": { transform: "rotate(-3deg)" },
+        },
+
         "fade-in": {
           "0%": { opacity: "0", transform: "translateY(-20px)" },
           "100%": { opacity: "1", transform: "translateY(0px)" },
@@ -36,6 +43,7 @@ export default {
         },
       },
       animation: {
+        swing: "swing 1.5s ease-in-out infinite alternate",
         "fade-in": "fade-in 1s ease-out forwards",
         "blink-cyan": "blink-cyan 2.5s",
         "blink-lime": "blink-lime 2.5s",
