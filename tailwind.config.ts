@@ -16,6 +16,10 @@ export default {
           "0%": { transform: "rotate(3deg)" },
           "100%": { transform: "rotate(-3deg)" },
         },
+        "lightbulb-on": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
 
         "fade-in": {
           "0%": { opacity: "0", transform: "translateY(-20px)" },
@@ -50,6 +54,7 @@ export default {
         "blink-fuchsia": "blink-fuchsia 2.5s",
         "blink-linkedin": "blink-linkedin 2.5s",
         "blink-github": "blink-github 2.5s",
+        "lightbulb-on": "lightbulb-on 1s ease-out forwards",
       },
     },
   },
