@@ -16,7 +16,7 @@ const Lightbulb = () => {
 
   return (
     <div className="animate-swing absolute left-20 top-0 hidden  h-[500px] w-[200px] origin-top sm:block ">
-      <div className="relative left-[96px] h-[200px] w-[4px] bg-black"></div>
+      <div className="relative left-[97px] h-[200px] w-[2px] bg-black"></div>
       <div className="relative left-[90px] z-20 flex h-[20px] w-[16px] flex-col justify-between bg-gray-400">
         <div className="r-[1px] relative h-[4px] w-[16px] bg-gray-600"></div>
         <div className="r-[1px] relative h-[4px] w-[16px] bg-gray-600"></div>
